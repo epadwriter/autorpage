@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autor</title>
+  <meta name="description" content="Sitio oficial del autor: libros, personajes, galería, cortometrajes y blog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" id="brand" href="#inicio">Autor</a>
+    <button id="menu-btn" aria-label="Menú">☰</button>
+    <nav>
+      <a data-tab="inicio" href="#inicio">Perfil y libros</a>
+      <a data-tab="personajes" href="#personajes">Personajes</a>
+      <a data-tab="galeria" href="#galeria">Galería</a>
+      <a data-tab="videos" href="#videos">Cortometrajes</a>
+      <a data-tab="blog" href="#blog">Blog y opinión</a>
+    </nav>
+  </header>
+
+  <main>
+    <p id="loading" class="empty">Cargando…</p>
+
+    <section id="tab-inicio">
+      <div id="perfil"></div>
+      <h2 class="section-title">Libros</h2>
+      <div id="libros" class="books"></div>
+    </section>
+
+    <section id="tab-personajes" hidden>
+      <h2 class="section-title">Personajes</h2>
+      <div id="personajes" class="grid"></div>
+    </section>
+
+    <section id="tab-galeria" hidden>
+      <h2 class="section-title">Galería de fotos</h2>
+      <div id="galeria" class="gallery"></div>
+    </section>
+
+    <section id="tab-videos" hidden>
+      <h2 class="section-title">Cortometrajes</h2>
+      <div id="videos" class="grid"></div>
+    </section>
+
+    <section id="tab-blog" hidden>
+      <h2 class="section-title">Blog y opinión</h2>
+      <div id="blog" class="posts"></div>
+    </section>
+  </main>
+
+  <footer>© <span id="footer-name"></span></footer>
+
+  <div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button id="lb-close" aria-label="Cerrar">✕ Cerrar</button>
+    <figure id="lb-content"></figure>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/demo-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
